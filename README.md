@@ -21,7 +21,10 @@ The questions asked for reporting are as follows -
 ```vagrant ssh```
 - You should load the news database provided by Udacity using  
 ```psql -d news -f newsdata.sql```
-- 
+- You should then create the views that the Python program will be using , the views are as follows - 
+- For Query 1  - This query asks about most popular 3 articles of all time. So we would be using the articles and the log tables to answer the question. 
+  - ```CREATE VIEW popular_articles AS select split_part(path,'/',3), count(path) FROM log GROUP BY path ORDER BY count(path) DESC; ```
+ 
 
 
 # CODE FILES 
@@ -30,4 +33,5 @@ The questions asked for reporting are as follows -
 # RUN PROGRAM 
 Run the following Report.py program  - [a relative link](Report.py)
 Syntax for running a python program on vagrant is -  
+``` psql -d -news```
 ``` python Report.py ```
