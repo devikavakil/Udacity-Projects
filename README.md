@@ -13,6 +13,15 @@ The questions asked for reporting are as follows -
 
 # SETUP AND PRE-REQUISITIES 
 
+- You should have the vagrant connection to remote server up and running so you can access the full setup that is needed to run the program
+(Instructions found at Udacity's section 3, lesson 2) 
+- You should be able to stand up the remote VM via the instructions  
+```vagrant up```
+- You should be able to connect to the environment using  
+```vagrant ssh```
+- You should load the news database provided by Udacity using  
+```psql -d news -f newsdata.sql```
+- 
 
 
 # CODE FILES 
