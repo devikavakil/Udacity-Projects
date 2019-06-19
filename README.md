@@ -22,7 +22,8 @@ The questions asked for reporting are as follows -
 - You should load the news database provided by Udacity using  
 ```psql -d news -f newsdata.sql```
 - You should then create the views that the Python program will be using , the views are as follows - 
-- For Query 1  - This query asks about most popular 3 articles of all time. So we would be using the articles and the log tables to answer the question. 
+- For Query 1  - This query asks about most popular 3 articles of all time. So we would be using the articles and the log tables to answer the question. Both tables have one thing in common - the slug column from articles matches part of the path column values in the log table. So creating a view of popular articles displaying only slug portion of the path. Later this view joined with the articles on the common slug path enables to extract the title of the article to display tope 3 article titles. 
+
   - ```CREATE VIEW popular_articles AS select split_part(path,'/',3), count(path) FROM log GROUP BY path ORDER BY count(path) DESC; ```
  
 
