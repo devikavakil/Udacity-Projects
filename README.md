@@ -19,4 +19,6 @@ The questions asked for reporting are as follows -
 
 
 # RUN PROGRAM 
-[a relative link] (Report.py)
+Run the following Report.py program  - [a relative link](Report.py)
+Syntax for running a python program on vagrant is -  
+``` python Report.py ```
